@@ -10,20 +10,6 @@ function main() {
   }))
 }
 
-function postSlack(text) {
-  const url = scriptProperties.getProperty("SLACK_URL");
-  const options = {
-    "method": "POST",
-    "headers": {
-      "Content-type": "application/json"
-    },
-    "payload": JSON.stringify({
-      "text": text,
-    })
-  };
-  UrlFetchApp.fetch(url, options);
-}
-
 function getSlackIdByEmail(email) {
   var options = {
     "method": "post",
